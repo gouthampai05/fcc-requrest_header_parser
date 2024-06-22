@@ -19,7 +19,7 @@ var listener = app.listen(process.env.PORT || 3000, function () {
   console.log("Your app is listening on port " + listener.address().port);
 });
 
-app.get("/api", (req, res) => {
+app.get("/whoami", (req, res) => {
   const ipaddress = req.ip.split(":")[3];
   const language = req.get("accept-language");
   const software = req.get("user-agent");
